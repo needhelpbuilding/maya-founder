@@ -25,76 +25,76 @@ export default function SettingsPage() {
 
       <div className="px-8 py-6 space-y-6 max-w-[1200px] mx-auto">
         {/* Hospital Identity */}
-        <div className="p-6 rounded-2xl bg-white border border-purple-100 shadow-xs space-y-4">
-          <h2 className="text-base font-bold text-[#170526] flex items-center gap-2">
-            <Building2 size={18} className="text-purple-600" />
+        <div className="p-6 rounded-2xl bg-white border border-slate-100 shadow-xs space-y-4">
+          <h2 className="text-base font-bold text-[#0E36B4] flex items-center gap-2">
+            <Building2 size={18} className="text-[#245BFF]" />
             Hospital Organization Profile
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
             <div>
-              <label className="block text-[#806b8c] font-semibold mb-1">Hospital Legal Name</label>
+              <label className="block text-[#64748B] font-semibold mb-1">Hospital Legal Name</label>
               <input
                 type="text"
                 readOnly
                 defaultValue="Maya Hospital & Multi Speciality Centre"
-                className="w-full p-2.5 rounded-xl bg-purple-50/40 border border-purple-100 font-medium text-[#170526]"
+                className="w-full p-2.5 rounded-xl bg-slate-50/40 border border-slate-100 font-medium text-[#0E36B4]"
               />
             </div>
             <div>
-              <label className="block text-[#806b8c] font-semibold mb-1">Registration / Accreditation</label>
+              <label className="block text-[#64748B] font-semibold mb-1">Registration / Accreditation</label>
               <input
                 type="text"
                 readOnly
                 defaultValue="NABH Accredited & UP Health Dept Certified"
-                className="w-full p-2.5 rounded-xl bg-purple-50/40 border border-purple-100 font-medium text-[#170526]"
+                className="w-full p-2.5 rounded-xl bg-slate-50/40 border border-slate-100 font-medium text-[#0E36B4]"
               />
             </div>
             <div>
-              <label className="block text-[#806b8c] font-semibold mb-1">Emergency 24x7 Helpline</label>
+              <label className="block text-[#64748B] font-semibold mb-1">Emergency 24x7 Helpline</label>
               <input
                 type="text"
                 readOnly
                 defaultValue="+91 9839752108 / +91 9161103325"
-                className="w-full p-2.5 rounded-xl bg-purple-50/40 border border-purple-100 font-medium text-[#170526]"
+                className="w-full p-2.5 rounded-xl bg-slate-50/40 border border-slate-100 font-medium text-[#0E36B4]"
               />
             </div>
             <div>
-              <label className="block text-[#806b8c] font-semibold mb-1">Primary Operating Campus</label>
+              <label className="block text-[#64748B] font-semibold mb-1">Primary Operating Campus</label>
               <input
                 type="text"
                 readOnly
                 defaultValue="Maya Hospital, Bilandpur, Gorakhpur, Uttar Pradesh 273001"
-                className="w-full p-2.5 rounded-xl bg-purple-50/40 border border-purple-100 font-medium text-[#170526]"
+                className="w-full p-2.5 rounded-xl bg-slate-50/40 border border-slate-100 font-medium text-[#0E36B4]"
               />
             </div>
           </div>
         </div>
 
         {/* Security & Access */}
-        <div className="p-6 rounded-2xl bg-white border border-purple-100 shadow-xs space-y-4">
-          <h2 className="text-base font-bold text-[#170526] flex items-center gap-2">
-            <Shield size={18} className="text-purple-600" />
+        <div className="p-6 rounded-2xl bg-white border border-slate-100 shadow-xs space-y-4">
+          <h2 className="text-base font-bold text-[#0E36B4] flex items-center gap-2">
+            <Shield size={18} className="text-[#245BFF]" />
             Founder Credentials & Access Control
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
             <div>
-              <label className="block text-[#806b8c] font-semibold mb-1">Signed-in Founder</label>
+              <label className="block text-[#64748B] font-semibold mb-1">Signed-in Founder</label>
               <input
                 type="text"
                 readOnly
                 defaultValue={founder?.name || 'Dr. Suyash Sharma'}
-                className="w-full p-2.5 rounded-xl bg-purple-50/40 border border-purple-100 font-bold text-[#170526]"
+                className="w-full p-2.5 rounded-xl bg-slate-50/40 border border-slate-100 font-bold text-[#0E36B4]"
               />
             </div>
             <div>
-              <label className="block text-[#806b8c] font-semibold mb-1">Role Authorization</label>
+              <label className="block text-[#64748B] font-semibold mb-1">Role Authorization</label>
               <input
                 type="text"
                 readOnly
                 defaultValue="Chief Executive Officer / Hospital Founder (Full Access)"
-                className="w-full p-2.5 rounded-xl bg-purple-50/40 border border-purple-100 font-bold text-purple-900"
+                className="w-full p-2.5 rounded-xl bg-slate-50/40 border border-slate-100 font-bold text-[#0E36B4]"
               />
             </div>
           </div>

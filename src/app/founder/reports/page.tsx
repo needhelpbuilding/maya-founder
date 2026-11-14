@@ -51,27 +51,27 @@ export default function ReportsPage() {
           {reports.map((r) => (
             <div
               key={r.title}
-              className="p-5 rounded-2xl bg-white border border-purple-100 shadow-xs flex flex-col justify-between"
+              className="p-5 rounded-2xl bg-white border border-slate-100 shadow-xs flex flex-col justify-between"
             >
               <div>
-                <div className="flex items-center gap-2.5 text-purple-700 mb-2">
+                <div className="flex items-center gap-2.5 text-[#245BFF] mb-2">
                   <FileText size={18} />
                   <span className="text-xs font-bold uppercase tracking-wider">{r.format}</span>
                 </div>
-                <h3 className="font-bold text-sm text-[#170526]">{r.title}</h3>
-                <p className="text-xs text-[#806b8c] mt-1.5">{r.description}</p>
-                <p className="text-[11px] text-purple-900 font-medium mt-3">
+                <h3 className="font-bold text-sm text-[#0E36B4]">{r.title}</h3>
+                <p className="text-xs text-[#64748B] mt-1.5">{r.description}</p>
+                <p className="text-[11px] text-[#0E36B4] font-medium mt-3">
                   Frequency: {r.period}
                 </p>
               </div>
 
-              <div className="mt-5 pt-3 border-t border-purple-50 flex items-center justify-between">
+              <div className="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between">
                 <span className="text-[11px] text-emerald-700 font-semibold flex items-center gap-1">
                   <CheckCircle2 size={12} /> Ready for generation
                 </span>
                 <button
                   onClick={() => alert(`Generating ${r.title}...`)}
-                  className="px-3 py-1.5 rounded-xl bg-purple-50 hover:bg-purple-100 text-purple-900 text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer"
+                  className="px-3 py-1.5 rounded-xl bg-slate-50 hover:bg-blue-50 text-[#0E36B4] text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer"
                 >
                   <Download size={13} /> Export Report
                 </button>

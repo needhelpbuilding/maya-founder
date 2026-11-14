@@ -48,7 +48,7 @@ export default function FounderFinancesPage() {
         actionButton={
           <button
             onClick={() => alert('Exporting audited revenue transaction ledger (CSV)...')}
-            className="px-4 py-2 rounded-xl bg-[#240b3b] hover:bg-[#170526] text-white text-xs font-semibold flex items-center gap-2 shadow-xs transition-colors cursor-pointer"
+            className="px-4 py-2 rounded-xl bg-[#245BFF] hover:bg-[#0E36B4] text-white text-xs font-semibold flex items-center gap-2 shadow-xs transition-colors cursor-pointer"
           >
             <FileSpreadsheet size={14} />
             Export Ledger CSV
@@ -59,8 +59,8 @@ export default function FounderFinancesPage() {
       <div className="px-8 py-6 space-y-6 max-w-[1600px] mx-auto">
         {/* Core Financial Stat Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-          <div className="p-4 rounded-2xl bg-white border border-purple-100 shadow-xs">
-            <span className="text-xs font-semibold text-[#806b8c] uppercase tracking-wider">
+          <div className="p-4 rounded-2xl bg-white border border-slate-100 shadow-xs">
+            <span className="text-xs font-semibold text-[#64748B] uppercase tracking-wider">
               Total Revenue Collected
             </span>
             <div className="flex items-baseline gap-1 mt-2">
@@ -72,52 +72,52 @@ export default function FounderFinancesPage() {
             <p className="text-[11px] text-emerald-600 mt-1 font-semibold">100% verified server-side</p>
           </div>
 
-          <div className="p-4 rounded-2xl bg-white border border-purple-100 shadow-xs">
-            <span className="text-xs font-semibold text-[#806b8c] uppercase tracking-wider">
+          <div className="p-4 rounded-2xl bg-white border border-slate-100 shadow-xs">
+            <span className="text-xs font-semibold text-[#64748B] uppercase tracking-wider">
               Pending Counter Dues
             </span>
             <div className="flex items-baseline gap-1 mt-2">
-              <span className="text-sm font-semibold text-[#170526]">₹</span>
-              <span className="text-2xl font-bold text-[#170526]">
+              <span className="text-sm font-semibold text-[#0E36B4]">₹</span>
+              <span className="text-2xl font-bold text-[#0E36B4]">
                 {pendingDues.toLocaleString('en-IN')}
               </span>
             </div>
             <p className="text-[11px] text-amber-600 mt-1 font-semibold">Pending check-in settlement</p>
           </div>
 
-          <div className="p-4 rounded-2xl bg-white border border-purple-100 shadow-xs">
-            <span className="text-xs font-semibold text-[#806b8c] uppercase tracking-wider">
+          <div className="p-4 rounded-2xl bg-white border border-slate-100 shadow-xs">
+            <span className="text-xs font-semibold text-[#64748B] uppercase tracking-wider">
               Razorpay / UPI Share
             </span>
             <div className="flex items-baseline gap-2 mt-2">
-              <span className="text-2xl font-bold text-purple-900">
+              <span className="text-2xl font-bold text-[#0E36B4]">
                 {Math.round((upiTotal / (totalCollected || 1)) * 100)}%
               </span>
-              <span className="text-xs text-[#806b8c] font-medium">Digital Collection</span>
+              <span className="text-xs text-[#64748B] font-medium">Digital Collection</span>
             </div>
-            <p className="text-[11px] text-[#806b8c] mt-1">Instant QR & online gateway</p>
+            <p className="text-[11px] text-[#64748B] mt-1">Instant QR & online gateway</p>
           </div>
 
-          <div className="p-4 rounded-2xl bg-white border border-purple-100 shadow-xs">
-            <span className="text-xs font-semibold text-[#806b8c] uppercase tracking-wider">
+          <div className="p-4 rounded-2xl bg-white border border-slate-100 shadow-xs">
+            <span className="text-xs font-semibold text-[#64748B] uppercase tracking-wider">
               Cash Desk Settlements
             </span>
             <div className="flex items-baseline gap-1 mt-2">
-              <span className="text-sm font-semibold text-[#170526]">₹</span>
-              <span className="text-2xl font-bold text-[#170526]">
+              <span className="text-sm font-semibold text-[#0E36B4]">₹</span>
+              <span className="text-2xl font-bold text-[#0E36B4]">
                 {cashTotal.toLocaleString('en-IN')}
               </span>
             </div>
-            <p className="text-[11px] text-[#806b8c] mt-1">Audited daily vault deposit</p>
+            <p className="text-[11px] text-[#64748B] mt-1">Audited daily vault deposit</p>
           </div>
         </div>
 
         {/* Transactions Table */}
-        <div className="p-6 rounded-2xl bg-white border border-purple-100 shadow-xs">
+        <div className="p-6 rounded-2xl bg-white border border-slate-100 shadow-xs">
           <div className="flex items-center justify-between mb-4">
             <div>
-              <h2 className="text-base font-bold text-[#170526]">Audited Transaction Ledger</h2>
-              <p className="text-xs text-[#806b8c]">Verified payment records with receipt identifiers</p>
+              <h2 className="text-base font-bold text-[#0E36B4]">Audited Transaction Ledger</h2>
+              <p className="text-xs text-[#64748B]">Verified payment records with receipt identifiers</p>
             </div>
             <span className="text-xs font-semibold px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-100">
               Audited Ledger
@@ -127,7 +127,7 @@ export default function FounderFinancesPage() {
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs">
               <thead>
-                <tr className="border-b border-purple-100 text-[#806b8c] uppercase tracking-wider">
+                <tr className="border-b border-slate-100 text-[#64748B] uppercase tracking-wider">
                   <th className="pb-3 font-semibold">Receipt #</th>
                   <th className="pb-3 font-semibold">Patient Name</th>
                   <th className="pb-3 font-semibold">Amount</th>
@@ -137,20 +137,20 @@ export default function FounderFinancesPage() {
                   <th className="pb-3 font-semibold text-right">Payment Timestamp</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-purple-50">
+              <tbody className="divide-y divide-slate-100">
                 {payments.map((p) => (
-                  <tr key={p.id} className="hover:bg-purple-50/20 transition-colors">
-                    <td className="py-3.5 font-mono font-bold text-purple-900">
+                  <tr key={p.id} className="hover:bg-slate-50/20 transition-colors">
+                    <td className="py-3.5 font-mono font-bold text-[#0E36B4]">
                       {p.receipt_number}
                     </td>
-                    <td className="py-3.5 font-bold text-[#170526]">{p.patient_name}</td>
+                    <td className="py-3.5 font-bold text-[#0E36B4]">{p.patient_name}</td>
                     <td className="py-3.5 font-bold text-emerald-700">₹{p.amount}</td>
                     <td className="py-3.5">
-                      <span className="px-2 py-0.5 rounded bg-purple-50 text-purple-900 font-semibold border border-purple-100">
+                      <span className="px-2 py-0.5 rounded bg-slate-50 text-[#0E36B4] font-semibold border border-slate-100">
                         {p.payment_method}
                       </span>
                     </td>
-                    <td className="py-3.5 text-[#3b284c]">{p.collected_by}</td>
+                    <td className="py-3.5 text-[#1E293B]">{p.collected_by}</td>
                     <td className="py-3.5">
                       <span
                         className={`badge-status ${
@@ -162,7 +162,7 @@ export default function FounderFinancesPage() {
                         {p.payment_status}
                       </span>
                     </td>
-                    <td className="py-3.5 text-right font-mono text-[11px] text-[#806b8c]">
+                    <td className="py-3.5 text-right font-mono text-[11px] text-[#64748B]">
                       {new Date(p.payment_date).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                     </td>
                   </tr>

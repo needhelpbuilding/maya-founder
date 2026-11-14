@@ -31,8 +31,8 @@ export default function FounderLeavesPage() {
 
       <div className="px-8 py-6 space-y-6 max-w-[1600px] mx-auto">
         {/* Core Policy Notice */}
-        <div className="p-4 rounded-xl bg-purple-50/70 border border-purple-200/60 text-[#3b284c] text-xs flex items-center gap-3">
-          <AlertCircle size={18} className="text-purple-700 flex-shrink-0" />
+        <div className="p-4 rounded-xl bg-slate-50/70 border border-slate-200/60 text-[#1E293B] text-xs flex items-center gap-3">
+          <AlertCircle size={18} className="text-[#245BFF] flex-shrink-0" />
           <span>
             <strong>Operational Rule:</strong> Approved doctor leaves do not automatically cancel or reassign
             appointments. Affected patients are immediately flagged on the Reception Desk dashboard for warm,
@@ -48,8 +48,8 @@ export default function FounderLeavesPage() {
               onClick={() => setFilter(tab)}
               className={`px-4 py-1.5 rounded-xl text-xs font-semibold capitalize transition-all cursor-pointer ${
                 filter === tab
-                  ? 'bg-[#240b3b] text-white shadow-xs'
-                  : 'bg-white text-[#806b8c] border border-purple-100 hover:text-[#170526]'
+                  ? 'bg-[#245BFF] text-white shadow-xs'
+                  : 'bg-white text-[#64748B] border border-slate-100 hover:text-[#0E36B4]'
               }`}
             >
               {tab} Requests
@@ -70,7 +70,7 @@ export default function FounderLeavesPage() {
             return (
               <div
                 key={leave.id}
-                className="p-5 rounded-2xl bg-white border border-purple-100 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-6"
+                className="p-5 rounded-2xl bg-white border border-slate-100 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-6"
               >
                 <div className="space-y-2 flex-1">
                   <div className="flex items-center gap-3">
@@ -85,15 +85,15 @@ export default function FounderLeavesPage() {
                     >
                       {leave.status}
                     </span>
-                    <h3 className="font-bold text-sm text-[#170526]">{leave.doctor_name}</h3>
-                    <span className="text-xs text-[#806b8c]">• {leave.department_name}</span>
+                    <h3 className="font-bold text-sm text-[#0E36B4]">{leave.doctor_name}</h3>
+                    <span className="text-xs text-[#64748B]">• {leave.department_name}</span>
                   </div>
 
-                  <p className="text-xs text-[#3b284c]">
+                  <p className="text-xs text-[#1E293B]">
                     <span className="font-semibold">Reason:</span> {leave.reason} ({leave.leave_type})
                   </p>
 
-                  <div className="flex flex-wrap items-center gap-4 text-xs text-[#806b8c] font-medium pt-1">
+                  <div className="flex flex-wrap items-center gap-4 text-xs text-[#64748B] font-medium pt-1">
                     <span className="flex items-center gap-1.5">
                       <Calendar size={13} />
                       Duration: {leave.start_date} to {leave.end_date}

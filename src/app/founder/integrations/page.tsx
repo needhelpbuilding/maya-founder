@@ -26,8 +26,8 @@ export default function IntegrationsPage() {
 
       <div className="px-8 py-6 space-y-6 max-w-[1600px] mx-auto">
         {/* Security Rule Warning */}
-        <div className="p-4 rounded-xl bg-purple-50/70 border border-purple-200/60 text-[#3b284c] text-xs flex items-center gap-3">
-          <Lock size={18} className="text-purple-700 flex-shrink-0" />
+        <div className="p-4 rounded-xl bg-slate-50/70 border border-slate-200/60 text-[#1E293B] text-xs flex items-center gap-3">
+          <Lock size={18} className="text-[#245BFF] flex-shrink-0" />
           <span>
             <strong>Zero-Trust Credential Security:</strong> In accordance with healthcare compliance and security
             policies, private API keys, webhook signing secrets, and database service role passwords are never
@@ -40,17 +40,17 @@ export default function IntegrationsPage() {
           {integrations.map((item) => (
             <div
               key={item.id}
-              className="p-5 rounded-2xl bg-white border border-purple-100 shadow-xs flex flex-col justify-between"
+              className="p-5 rounded-2xl bg-white border border-slate-100 shadow-xs flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-start justify-between gap-3 mb-3">
                   <div className="flex items-center gap-2.5">
-                    <div className="p-2 rounded-xl bg-purple-50 text-purple-700">
+                    <div className="p-2 rounded-xl bg-slate-50 text-[#245BFF]">
                       <Cpu size={18} />
                     </div>
                     <div>
-                      <h3 className="font-bold text-sm text-[#170526]">{item.integration_name}</h3>
-                      <p className="text-[11px] text-[#806b8c] font-mono">{item.integration_type}</p>
+                      <h3 className="font-bold text-sm text-[#0E36B4]">{item.integration_name}</h3>
+                      <p className="text-[11px] text-[#64748B] font-mono">{item.integration_type}</p>
                     </div>
                   </div>
                   <span
@@ -66,16 +66,16 @@ export default function IntegrationsPage() {
                   </span>
                 </div>
 
-                <div className="space-y-2 mt-4 text-xs text-[#3b284c]">
+                <div className="space-y-2 mt-4 text-xs text-[#1E293B]">
                   <div className="flex justify-between items-center">
-                    <span className="text-[#806b8c]">Environment:</span>
-                    <span className="font-semibold text-purple-900 uppercase text-[10px] bg-purple-50 px-2 py-0.5 rounded">
+                    <span className="text-[#64748B]">Environment:</span>
+                    <span className="font-semibold text-[#0E36B4] uppercase text-[10px] bg-slate-50 px-2 py-0.5 rounded">
                       {item.environment}
                     </span>
                   </div>
 
                   <div className="flex justify-between items-center">
-                    <span className="text-[#806b8c]">Last Synchronized:</span>
+                    <span className="text-[#64748B]">Last Synchronized:</span>
                     <span className="font-mono text-[11px]">
                       {item.last_sync_at ? new Date(item.last_sync_at).toLocaleTimeString() : 'N/A'}
                     </span>
@@ -90,11 +90,11 @@ export default function IntegrationsPage() {
                 </div>
               </div>
 
-              <div className="mt-5 pt-3 border-t border-purple-50 flex items-center justify-between text-xs">
-                <span className="text-[#806b8c] text-[11px]">Credential: Encrypted in KMS</span>
+              <div className="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                <span className="text-[#64748B] text-[11px]">Credential: Encrypted in KMS</span>
                 <button
                   onClick={() => alert(`Synchronizing ${item.integration_name}...`)}
-                  className="text-purple-700 font-semibold hover:text-purple-900 hover:underline flex items-center gap-1 cursor-pointer"
+                  className="text-[#245BFF] font-semibold hover:text-[#0E36B4] hover:underline flex items-center gap-1 cursor-pointer"
                 >
                   Test Sync <RefreshCw size={12} />
                 </button>

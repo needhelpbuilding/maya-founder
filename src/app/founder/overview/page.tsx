@@ -97,55 +97,55 @@ export default function FounderOverviewPage() {
         {/* 10 Key Operational Metric Cards */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
           {/* 1. Total Patients */}
-          <div className="p-4 rounded-2xl bg-white border border-purple-100/80 shadow-xs hover:border-purple-200 transition-all">
-            <div className="flex items-center justify-between text-[#806b8c] mb-2">
+          <div className="p-4 rounded-2xl bg-white border border-slate-100/80 shadow-xs hover:border-slate-200 transition-all">
+            <div className="flex items-center justify-between text-[#64748B] mb-2">
               <span className="text-xs font-semibold uppercase tracking-wider">Total Patients</span>
-              <div className="p-1.5 rounded-lg bg-purple-50 text-purple-700">
+              <div className="p-1.5 rounded-lg bg-slate-50 text-[#245BFF]">
                 <Users size={16} />
               </div>
             </div>
             <div className="flex items-baseline gap-2">
-              <span className="text-2xl font-bold text-[#170526]">{totalPatients}</span>
+              <span className="text-2xl font-bold text-[#0E36B4]">{totalPatients}</span>
               <span className="text-xs font-semibold text-emerald-600 flex items-center">
                 +12% <TrendingUp size={12} className="ml-0.5" />
               </span>
             </div>
-            <p className="text-[11px] text-[#806b8c] mt-1 font-medium">Directory size across all wards</p>
+            <p className="text-[11px] text-[#64748B] mt-1 font-medium">Directory size across all wards</p>
           </div>
 
           {/* 2. New Patients Today */}
-          <div className="p-4 rounded-2xl bg-white border border-purple-100/80 shadow-xs hover:border-purple-200 transition-all">
-            <div className="flex items-center justify-between text-[#806b8c] mb-2">
+          <div className="p-4 rounded-2xl bg-white border border-slate-100/80 shadow-xs hover:border-slate-200 transition-all">
+            <div className="flex items-center justify-between text-[#64748B] mb-2">
               <span className="text-xs font-semibold uppercase tracking-wider">New Today</span>
               <div className="p-1.5 rounded-lg bg-indigo-50 text-indigo-700">
                 <UserCheck size={16} />
               </div>
             </div>
             <div className="flex items-baseline gap-2">
-              <span className="text-2xl font-bold text-[#170526]">{newPatientsToday}</span>
-              <span className="text-xs text-[#806b8c] font-medium">Registered OPD/IPD</span>
+              <span className="text-2xl font-bold text-[#0E36B4]">{newPatientsToday}</span>
+              <span className="text-xs text-[#64748B] font-medium">Registered OPD/IPD</span>
             </div>
             <p className="text-[11px] text-emerald-600 mt-1 font-semibold">Active onboarding</p>
           </div>
 
           {/* 3. Today's Appointments */}
-          <div className="p-4 rounded-2xl bg-white border border-purple-100/80 shadow-xs hover:border-purple-200 transition-all">
-            <div className="flex items-center justify-between text-[#806b8c] mb-2">
+          <div className="p-4 rounded-2xl bg-white border border-slate-100/80 shadow-xs hover:border-slate-200 transition-all">
+            <div className="flex items-center justify-between text-[#64748B] mb-2">
               <span className="text-xs font-semibold uppercase tracking-wider">Appointments</span>
               <div className="p-1.5 rounded-lg bg-blue-50 text-blue-700">
                 <CalendarCheck size={16} />
               </div>
             </div>
             <div className="flex items-baseline gap-2">
-              <span className="text-2xl font-bold text-[#170526]">{todayAppointments.length}</span>
+              <span className="text-2xl font-bold text-[#0E36B4]">{todayAppointments.length}</span>
               <span className="text-xs text-blue-600 font-medium">Booked for today</span>
             </div>
-            <p className="text-[11px] text-[#806b8c] mt-1 font-medium">{pendingAppointments} awaiting action</p>
+            <p className="text-[11px] text-[#64748B] mt-1 font-medium">{pendingAppointments} awaiting action</p>
           </div>
 
           {/* 4. Completed Appointments */}
-          <div className="p-4 rounded-2xl bg-white border border-purple-100/80 shadow-xs hover:border-purple-200 transition-all">
-            <div className="flex items-center justify-between text-[#806b8c] mb-2">
+          <div className="p-4 rounded-2xl bg-white border border-slate-100/80 shadow-xs hover:border-slate-200 transition-all">
+            <div className="flex items-center justify-between text-[#64748B] mb-2">
               <span className="text-xs font-semibold uppercase tracking-wider">Consulted</span>
               <div className="p-1.5 rounded-lg bg-emerald-50 text-emerald-700">
                 <CheckCircle2 size={16} />
@@ -155,12 +155,12 @@ export default function FounderOverviewPage() {
               <span className="text-2xl font-bold text-emerald-700">{completedAppointments}</span>
               <span className="text-xs text-emerald-600 font-semibold">Completed</span>
             </div>
-            <p className="text-[11px] text-[#806b8c] mt-1 font-medium">Out of {todayAppointments.length} total</p>
+            <p className="text-[11px] text-[#64748B] mt-1 font-medium">Out of {todayAppointments.length} total</p>
           </div>
 
           {/* 5. Pending Appointments */}
-          <div className="p-4 rounded-2xl bg-white border border-purple-100/80 shadow-xs hover:border-purple-200 transition-all">
-            <div className="flex items-center justify-between text-[#806b8c] mb-2">
+          <div className="p-4 rounded-2xl bg-white border border-slate-100/80 shadow-xs hover:border-slate-200 transition-all">
+            <div className="flex items-center justify-between text-[#64748B] mb-2">
               <span className="text-xs font-semibold uppercase tracking-wider">Queue Pending</span>
               <div className="p-1.5 rounded-lg bg-amber-50 text-amber-700">
                 <Clock size={16} />
@@ -170,42 +170,42 @@ export default function FounderOverviewPage() {
               <span className="text-2xl font-bold text-amber-700">{pendingAppointments}</span>
               <span className="text-xs text-amber-600 font-medium">In Waiting / Checked-in</span>
             </div>
-            <p className="text-[11px] text-[#806b8c] mt-1 font-medium">Reception desk triage active</p>
+            <p className="text-[11px] text-[#64748B] mt-1 font-medium">Reception desk triage active</p>
           </div>
 
           {/* 6. Current Admissions */}
-          <div className="p-4 rounded-2xl bg-white border border-purple-100/80 shadow-xs hover:border-purple-200 transition-all">
-            <div className="flex items-center justify-between text-[#806b8c] mb-2">
+          <div className="p-4 rounded-2xl bg-white border border-slate-100/80 shadow-xs hover:border-slate-200 transition-all">
+            <div className="flex items-center justify-between text-[#64748B] mb-2">
               <span className="text-xs font-semibold uppercase tracking-wider">Inpatients</span>
               <div className="p-1.5 rounded-lg bg-teal-50 text-teal-700">
                 <BedDouble size={16} />
               </div>
             </div>
             <div className="flex items-baseline gap-2">
-              <span className="text-2xl font-bold text-[#170526]">{currentAdmissions}</span>
+              <span className="text-2xl font-bold text-[#0E36B4]">{currentAdmissions}</span>
               <span className="text-xs text-teal-700 font-medium">Admitted</span>
             </div>
-            <p className="text-[11px] text-[#806b8c] mt-1 font-medium">ICU & Deluxe Wards</p>
+            <p className="text-[11px] text-[#64748B] mt-1 font-medium">ICU & Deluxe Wards</p>
           </div>
 
           {/* 7. Available Doctors */}
-          <div className="p-4 rounded-2xl bg-white border border-purple-100/80 shadow-xs hover:border-purple-200 transition-all">
-            <div className="flex items-center justify-between text-[#806b8c] mb-2">
+          <div className="p-4 rounded-2xl bg-white border border-slate-100/80 shadow-xs hover:border-slate-200 transition-all">
+            <div className="flex items-center justify-between text-[#64748B] mb-2">
               <span className="text-xs font-semibold uppercase tracking-wider">Active Doctors</span>
-              <div className="p-1.5 rounded-lg bg-purple-50 text-purple-700">
+              <div className="p-1.5 rounded-lg bg-slate-50 text-[#245BFF]">
                 <UserCheck size={16} />
               </div>
             </div>
             <div className="flex items-baseline gap-2">
-              <span className="text-2xl font-bold text-[#170526]">{availableDoctors}</span>
-              <span className="text-xs text-[#806b8c] font-medium">of {doctors.length} on duty</span>
+              <span className="text-2xl font-bold text-[#0E36B4]">{availableDoctors}</span>
+              <span className="text-xs text-[#64748B] font-medium">of {doctors.length} on duty</span>
             </div>
             <p className="text-[11px] text-emerald-600 mt-1 font-medium">OPD schedules operational</p>
           </div>
 
           {/* 8. Doctors on Leave */}
-          <div className="p-4 rounded-2xl bg-white border border-purple-100/80 shadow-xs hover:border-purple-200 transition-all">
-            <div className="flex items-center justify-between text-[#806b8c] mb-2">
+          <div className="p-4 rounded-2xl bg-white border border-slate-100/80 shadow-xs hover:border-slate-200 transition-all">
+            <div className="flex items-center justify-between text-[#64748B] mb-2">
               <span className="text-xs font-semibold uppercase tracking-wider">Staff on Leave</span>
               <div className="p-1.5 rounded-lg bg-rose-50 text-rose-700">
                 <UserX size={16} />
@@ -215,35 +215,35 @@ export default function FounderOverviewPage() {
               <span className="text-2xl font-bold text-rose-700">{doctorsOnLeave}</span>
               <span className="text-xs text-rose-600 font-medium">Approved Leaves</span>
             </div>
-            <p className="text-[11px] text-[#806b8c] mt-1 font-medium">No auto-cancellation applied</p>
+            <p className="text-[11px] text-[#64748B] mt-1 font-medium">No auto-cancellation applied</p>
           </div>
 
           {/* 9. Revenue Collected Today */}
-          <div className="p-4 rounded-2xl bg-white border border-purple-100/80 shadow-xs hover:border-purple-200 transition-all">
-            <div className="flex items-center justify-between text-[#806b8c] mb-2">
+          <div className="p-4 rounded-2xl bg-white border border-slate-100/80 shadow-xs hover:border-slate-200 transition-all">
+            <div className="flex items-center justify-between text-[#64748B] mb-2">
               <span className="text-xs font-semibold uppercase tracking-wider">Revenue Today</span>
               <div className="p-1.5 rounded-lg bg-emerald-50 text-emerald-700">
                 <IndianRupee size={16} />
               </div>
             </div>
             <div className="flex items-baseline gap-1">
-              <span className="text-xs text-[#806b8c] font-medium">₹</span>
+              <span className="text-xs text-[#64748B] font-medium">₹</span>
               <span className="text-2xl font-bold text-emerald-700">{revenueToday.toLocaleString('en-IN')}</span>
             </div>
-            <p className="text-[11px] text-[#806b8c] mt-1 font-medium">Settled via UPI/Cash/Desk</p>
+            <p className="text-[11px] text-[#64748B] mt-1 font-medium">Settled via UPI/Cash/Desk</p>
           </div>
 
           {/* 10. Outstanding Payments */}
-          <div className="p-4 rounded-2xl bg-white border border-purple-100/80 shadow-xs hover:border-purple-200 transition-all">
-            <div className="flex items-center justify-between text-[#806b8c] mb-2">
+          <div className="p-4 rounded-2xl bg-white border border-slate-100/80 shadow-xs hover:border-slate-200 transition-all">
+            <div className="flex items-center justify-between text-[#64748B] mb-2">
               <span className="text-xs font-semibold uppercase tracking-wider">Pending Dues</span>
-              <div className="p-1.5 rounded-lg bg-purple-50 text-purple-700">
+              <div className="p-1.5 rounded-lg bg-slate-50 text-[#245BFF]">
                 <AlertCircle size={16} />
               </div>
             </div>
             <div className="flex items-baseline gap-1">
-              <span className="text-xs text-[#806b8c] font-medium">₹</span>
-              <span className="text-2xl font-bold text-[#170526]">{pendingPayments.toLocaleString('en-IN')}</span>
+              <span className="text-xs text-[#64748B] font-medium">₹</span>
+              <span className="text-2xl font-bold text-[#0E36B4]">{pendingPayments.toLocaleString('en-IN')}</span>
             </div>
             <p className="text-[11px] text-amber-600 mt-1 font-semibold">Triage pending at counter</p>
           </div>
@@ -254,15 +254,15 @@ export default function FounderOverviewPage() {
           {/* Left 2 Cols: Operations & Real-time Doctor Availability */}
           <div className="lg:col-span-2 space-y-6">
             {/* Active Doctors & Availability Card */}
-            <div className="p-6 rounded-2xl bg-white border border-purple-100/80 shadow-xs">
+            <div className="p-6 rounded-2xl bg-white border border-slate-100/80 shadow-xs">
               <div className="flex items-center justify-between mb-4">
                 <div>
-                  <h2 className="text-base font-bold text-[#170526]">Today&apos;s Clinical Faculty Schedule</h2>
-                  <p className="text-xs text-[#806b8c]">Consultants on duty and operational OPD status</p>
+                  <h2 className="text-base font-bold text-[#0E36B4]">Today&apos;s Clinical Faculty Schedule</h2>
+                  <p className="text-xs text-[#64748B]">Consultants on duty and operational OPD status</p>
                 </div>
                 <Link
                   href="/founder/doctors"
-                  className="text-xs font-semibold text-purple-700 hover:text-purple-900 flex items-center gap-1 hover:underline"
+                  className="text-xs font-semibold text-[#245BFF] hover:text-[#0E36B4] flex items-center gap-1 hover:underline"
                 >
                   Manage Doctors <ChevronRight size={14} />
                 </Link>
@@ -271,7 +271,7 @@ export default function FounderOverviewPage() {
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-xs">
                   <thead>
-                    <tr className="border-b border-purple-50 text-[#806b8c] uppercase tracking-wider">
+                    <tr className="border-b border-slate-100 text-[#64748B] uppercase tracking-wider">
                       <th className="pb-3 font-semibold">Doctor</th>
                       <th className="pb-3 font-semibold">Department</th>
                       <th className="pb-3 font-semibold">OPD Timings</th>
@@ -279,18 +279,18 @@ export default function FounderOverviewPage() {
                       <th className="pb-3 font-semibold">Status</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-purple-50">
+                  <tbody className="divide-y divide-slate-100">
                     {doctors.slice(0, 5).map((doc) => (
-                      <tr key={doc.id} className="hover:bg-purple-50/30 transition-colors">
-                        <td className="py-3 font-semibold text-[#170526] flex items-center gap-2.5">
-                          <div className="w-7 h-7 rounded-full bg-purple-100 text-purple-700 font-bold flex items-center justify-center text-xs">
+                      <tr key={doc.id} className="hover:bg-slate-50/30 transition-colors">
+                        <td className="py-3 font-semibold text-[#0E36B4] flex items-center gap-2.5">
+                          <div className="w-7 h-7 rounded-full bg-blue-50 text-[#245BFF] font-bold flex items-center justify-center text-xs">
                             {doc.name[4] || 'D'}
                           </div>
                           <span>{doc.name}</span>
                         </td>
-                        <td className="py-3 text-[#3b284c] font-medium">{doc.department_name}</td>
-                        <td className="py-3 text-[#806b8c] font-mono text-[11px]">{doc.opd_timings}</td>
-                        <td className="py-3 font-semibold text-[#170526]">₹{doc.consultation_fee}</td>
+                        <td className="py-3 text-[#1E293B] font-medium">{doc.department_name}</td>
+                        <td className="py-3 text-[#64748B] font-mono text-[11px]">{doc.opd_timings}</td>
+                        <td className="py-3 font-semibold text-[#0E36B4]">₹{doc.consultation_fee}</td>
                         <td className="py-3">
                           <span
                             className={`badge-status ${
@@ -308,20 +308,20 @@ export default function FounderOverviewPage() {
             </div>
 
             {/* Department Breakdown & Volume */}
-            <div className="p-6 rounded-2xl bg-white border border-purple-100/80 shadow-xs">
+            <div className="p-6 rounded-2xl bg-white border border-slate-100/80 shadow-xs">
               <div className="flex items-center justify-between mb-4">
                 <div>
-                  <h2 className="text-base font-bold text-[#170526]">Department-Wise Patient Distribution</h2>
-                  <p className="text-xs text-[#806b8c]">Consultation volume split across specialities</p>
+                  <h2 className="text-base font-bold text-[#0E36B4]">Department-Wise Patient Distribution</h2>
+                  <p className="text-xs text-[#64748B]">Consultation volume split across specialities</p>
                 </div>
-                <span className="text-xs font-semibold px-2.5 py-1 rounded-lg bg-purple-50 text-purple-700 border border-purple-100">
+                <span className="text-xs font-semibold px-2.5 py-1 rounded-lg bg-slate-50 text-[#245BFF] border border-slate-100">
                   Live Aggregate
                 </span>
               </div>
 
               <div className="space-y-3">
                 {[
-                  { dept: 'General Medicine & Diabetes', count: 18, pct: 36, color: 'bg-purple-600' },
+                  { dept: 'General Medicine & Diabetes', count: 18, pct: 36, color: 'bg-[#245BFF]' },
                   { dept: 'Obstetrics & Gynaecology', count: 14, pct: 28, color: 'bg-indigo-600' },
                   { dept: 'Orthopaedics & Joint Replacement', count: 9, pct: 18, color: 'bg-emerald-600' },
                   { dept: 'Paediatrics & Neonatology', count: 6, pct: 12, color: 'bg-amber-600' },
@@ -329,10 +329,10 @@ export default function FounderOverviewPage() {
                 ].map((item) => (
                   <div key={item.dept} className="space-y-1">
                     <div className="flex justify-between text-xs font-medium">
-                      <span className="text-[#170526] font-semibold">{item.dept}</span>
-                      <span className="text-[#806b8c]">{item.count} patients ({item.pct}%)</span>
+                      <span className="text-[#0E36B4] font-semibold">{item.dept}</span>
+                      <span className="text-[#64748B]">{item.count} patients ({item.pct}%)</span>
                     </div>
-                    <div className="h-2 w-full bg-purple-50 rounded-full overflow-hidden">
+                    <div className="h-2 w-full bg-slate-50 rounded-full overflow-hidden">
                       <div
                         className={`h-full ${item.color} rounded-full transition-all duration-500`}
                         style={{ width: `${item.pct}%` }}
@@ -347,15 +347,15 @@ export default function FounderOverviewPage() {
           {/* Right 1 Col: Live Audit Trail & Infrastructure Snapshot */}
           <div className="space-y-6">
             {/* Infrastructure Quick Status */}
-            <div className="p-6 rounded-2xl bg-white border border-purple-100/80 shadow-xs">
+            <div className="p-6 rounded-2xl bg-white border border-slate-100/80 shadow-xs">
               <div className="flex items-center justify-between mb-3">
-                <h2 className="text-base font-bold text-[#170526] flex items-center gap-2">
-                  <Activity size={18} className="text-purple-600" />
+                <h2 className="text-base font-bold text-[#0E36B4] flex items-center gap-2">
+                  <Activity size={18} className="text-[#245BFF]" />
                   Infrastructure Health
                 </h2>
                 <Link
                   href="/founder/api-health"
-                  className="text-xs font-semibold text-purple-700 hover:text-purple-900 flex items-center gap-0.5"
+                  className="text-xs font-semibold text-[#245BFF] hover:text-[#0E36B4] flex items-center gap-0.5"
                 >
                   Full View <ChevronRight size={14} />
                 </Link>
@@ -365,13 +365,13 @@ export default function FounderOverviewPage() {
                 {services.slice(0, 4).map((srv) => (
                   <div
                     key={srv.id}
-                    className="p-3 rounded-xl bg-purple-50/40 border border-purple-100/60 flex items-center justify-between"
+                    className="p-3 rounded-xl bg-slate-50/40 border border-slate-100/60 flex items-center justify-between"
                   >
                     <div>
-                      <p className="text-xs font-semibold text-[#170526] truncate max-w-[170px]">
+                      <p className="text-xs font-semibold text-[#0E36B4] truncate max-w-[170px]">
                         {srv.service_name}
                       </p>
-                      <p className="text-[10px] text-[#806b8c] font-mono mt-0.5">
+                      <p className="text-[10px] text-[#64748B] font-mono mt-0.5">
                         Latency: {srv.response_time_ms}ms
                       </p>
                     </div>
@@ -392,15 +392,15 @@ export default function FounderOverviewPage() {
             </div>
 
             {/* Recent Audit & System Activity Feed */}
-            <div className="p-6 rounded-2xl bg-white border border-purple-100/80 shadow-xs">
+            <div className="p-6 rounded-2xl bg-white border border-slate-100/80 shadow-xs">
               <div className="flex items-center justify-between mb-4">
-                <h2 className="text-base font-bold text-[#170526] flex items-center gap-2">
-                  <ShieldCheck size={18} className="text-purple-600" />
+                <h2 className="text-base font-bold text-[#0E36B4] flex items-center gap-2">
+                  <ShieldCheck size={18} className="text-[#245BFF]" />
                   Executive Audit Feed
                 </h2>
                 <Link
                   href="/founder/activity"
-                  className="text-xs font-semibold text-purple-700 hover:text-purple-900 flex items-center gap-0.5"
+                  className="text-xs font-semibold text-[#245BFF] hover:text-[#0E36B4] flex items-center gap-0.5"
                 >
                   Logs <ChevronRight size={14} />
                 </Link>
@@ -408,13 +408,13 @@ export default function FounderOverviewPage() {
 
               <div className="space-y-3.5">
                 {auditLogs.slice(0, 5).map((log) => (
-                  <div key={log.id} className="relative pl-5 pb-3 border-l-2 border-purple-100 last:border-l-0">
-                    <div className="absolute -left-[5px] top-1.5 w-2 h-2 rounded-full bg-purple-500" />
-                    <p className="text-xs font-semibold text-[#170526] tracking-tight">{log.action}</p>
-                    <p className="text-[11px] text-[#806b8c] mt-0.5">
-                      By <span className="font-medium text-[#3b284c]">{log.actor_name}</span> ({log.actor_role})
+                  <div key={log.id} className="relative pl-5 pb-3 border-l-2 border-slate-100 last:border-l-0">
+                    <div className="absolute -left-[5px] top-1.5 w-2 h-2 rounded-full bg-[#245BFF]" />
+                    <p className="text-xs font-semibold text-[#0E36B4] tracking-tight">{log.action}</p>
+                    <p className="text-[11px] text-[#64748B] mt-0.5">
+                      By <span className="font-medium text-[#1E293B]">{log.actor_name}</span> ({log.actor_role})
                     </p>
-                    <span className="text-[10px] text-[#806b8c] font-mono block mt-1">
+                    <span className="text-[10px] text-[#64748B] font-mono block mt-1">
                       {new Date(log.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                     </span>
                   </div>

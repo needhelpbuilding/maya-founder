@@ -45,7 +45,7 @@ export default function ApiHealthPage() {
           <button
             onClick={handleManualCheck}
             disabled={checking}
-            className="px-4 py-2 rounded-xl bg-[#240b3b] hover:bg-[#170526] text-white text-xs font-semibold flex items-center gap-2 shadow-xs transition-colors cursor-pointer"
+            className="px-4 py-2 rounded-xl bg-[#245BFF] hover:bg-[#0E36B4] text-white text-xs font-semibold flex items-center gap-2 shadow-xs transition-colors cursor-pointer"
           >
             <RefreshCw size={14} className={checking ? 'animate-spin' : ''} />
             {checking ? 'Pinging Services...' : 'Run Telemetry Check'}
@@ -56,8 +56,8 @@ export default function ApiHealthPage() {
       <div className="px-8 py-6 space-y-6 max-w-[1600px] mx-auto">
         {/* Core Infrastructure Summary Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-          <div className="p-4 rounded-2xl bg-white border border-purple-100 shadow-xs">
-            <span className="text-xs font-semibold text-[#806b8c] uppercase tracking-wider">
+          <div className="p-4 rounded-2xl bg-white border border-slate-100 shadow-xs">
+            <span className="text-xs font-semibold text-[#64748B] uppercase tracking-wider">
               Overall Health
             </span>
             <div className="flex items-baseline gap-2 mt-2">
@@ -66,53 +66,53 @@ export default function ApiHealthPage() {
               </span>
               <span className="text-xs text-emerald-600 font-semibold">Service Uptime</span>
             </div>
-            <p className="text-[11px] text-[#806b8c] mt-1">
+            <p className="text-[11px] text-[#64748B] mt-1">
               {operationalCount} of {services.length} services nominal
             </p>
           </div>
 
-          <div className="p-4 rounded-2xl bg-white border border-purple-100 shadow-xs">
-            <span className="text-xs font-semibold text-[#806b8c] uppercase tracking-wider">
+          <div className="p-4 rounded-2xl bg-white border border-slate-100 shadow-xs">
+            <span className="text-xs font-semibold text-[#64748B] uppercase tracking-wider">
               Degraded / Alerts
             </span>
             <div className="flex items-baseline gap-2 mt-2">
               <span className="text-2xl font-bold text-amber-700">{degradedCount}</span>
               <span className="text-xs text-amber-600 font-semibold">High Latency</span>
             </div>
-            <p className="text-[11px] text-[#806b8c] mt-1">Automatic throttling active</p>
+            <p className="text-[11px] text-[#64748B] mt-1">Automatic throttling active</p>
           </div>
 
-          <div className="p-4 rounded-2xl bg-white border border-purple-100 shadow-xs">
-            <span className="text-xs font-semibold text-[#806b8c] uppercase tracking-wider">
+          <div className="p-4 rounded-2xl bg-white border border-slate-100 shadow-xs">
+            <span className="text-xs font-semibold text-[#64748B] uppercase tracking-wider">
               Outages (Down)
             </span>
             <div className="flex items-baseline gap-2 mt-2">
-              <span className="text-2xl font-bold text-[#170526]">{downCount}</span>
+              <span className="text-2xl font-bold text-[#0E36B4]">{downCount}</span>
               <span className="text-xs text-emerald-600 font-semibold">No Outages</span>
             </div>
-            <p className="text-[11px] text-[#806b8c] mt-1">Core endpoints responding</p>
+            <p className="text-[11px] text-[#64748B] mt-1">Core endpoints responding</p>
           </div>
 
-          <div className="p-4 rounded-2xl bg-white border border-purple-100 shadow-xs">
-            <span className="text-xs font-semibold text-[#806b8c] uppercase tracking-wider">
+          <div className="p-4 rounded-2xl bg-white border border-slate-100 shadow-xs">
+            <span className="text-xs font-semibold text-[#64748B] uppercase tracking-wider">
               Avg Latency
             </span>
             <div className="flex items-baseline gap-2 mt-2">
-              <span className="text-2xl font-bold text-[#170526]">{avgResponseTime}ms</span>
+              <span className="text-2xl font-bold text-[#0E36B4]">{avgResponseTime}ms</span>
               <span className="text-xs text-emerald-600 font-semibold">Fast Response</span>
             </div>
-            <p className="text-[11px] text-[#806b8c] mt-1">Across all cloud endpoints</p>
+            <p className="text-[11px] text-[#64748B] mt-1">Across all cloud endpoints</p>
           </div>
         </div>
 
         {/* Live Service Matrix */}
-        <div className="p-6 rounded-2xl bg-white border border-purple-100 shadow-xs">
+        <div className="p-6 rounded-2xl bg-white border border-slate-100 shadow-xs">
           <div className="flex items-center justify-between mb-4">
             <div>
-              <h2 className="text-base font-bold text-[#170526]">Configured Services & APIs</h2>
-              <p className="text-xs text-[#806b8c]">Live health check results verified server-side</p>
+              <h2 className="text-base font-bold text-[#0E36B4]">Configured Services & APIs</h2>
+              <p className="text-xs text-[#64748B]">Live health check results verified server-side</p>
             </div>
-            <span className="text-[11px] text-[#806b8c] font-mono">
+            <span className="text-[11px] text-[#64748B] font-mono">
               Last check: {new Date().toLocaleTimeString()}
             </span>
           </div>
@@ -120,7 +120,7 @@ export default function ApiHealthPage() {
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs">
               <thead>
-                <tr className="border-b border-purple-100 text-[#806b8c] uppercase tracking-wider">
+                <tr className="border-b border-slate-100 text-[#64748B] uppercase tracking-wider">
                   <th className="pb-3 font-semibold">Service Name</th>
                   <th className="pb-3 font-semibold">Endpoint / Type</th>
                   <th className="pb-3 font-semibold">Environment</th>
@@ -129,12 +129,12 @@ export default function ApiHealthPage() {
                   <th className="pb-3 font-semibold text-right">Last Verified</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-purple-50">
+              <tbody className="divide-y divide-slate-100">
                 {services.map((srv) => (
-                  <tr key={srv.id} className="hover:bg-purple-50/20 transition-colors">
-                    <td className="py-3.5 font-bold text-[#170526]">
+                  <tr key={srv.id} className="hover:bg-slate-50/20 transition-colors">
+                    <td className="py-3.5 font-bold text-[#0E36B4]">
                       <div className="flex items-center gap-2">
-                        <Server size={15} className="text-purple-600" />
+                        <Server size={15} className="text-[#245BFF]" />
                         <span>{srv.service_name}</span>
                       </div>
                       {srv.safe_error_message && (
@@ -143,11 +143,11 @@ export default function ApiHealthPage() {
                         </p>
                       )}
                     </td>
-                    <td className="py-3.5 font-mono text-[11px] text-[#806b8c]">
+                    <td className="py-3.5 font-mono text-[11px] text-[#64748B]">
                       {srv.endpoint_reference || srv.service_type}
                     </td>
                     <td className="py-3.5">
-                      <span className="px-2 py-0.5 rounded-md bg-purple-50 text-purple-700 font-semibold text-[10px] uppercase border border-purple-100">
+                      <span className="px-2 py-0.5 rounded-md bg-slate-50 text-[#245BFF] font-semibold text-[10px] uppercase border border-slate-100">
                         {srv.environment}
                       </span>
                     </td>
@@ -175,7 +175,7 @@ export default function ApiHealthPage() {
                         {srv.status}
                       </span>
                     </td>
-                    <td className="py-3.5 text-right text-[11px] text-[#806b8c] font-mono">
+                    <td className="py-3.5 text-right text-[11px] text-[#64748B] font-mono">
                       {new Date(srv.last_checked_at).toLocaleTimeString([], {
                         hour: '2-digit',
                         minute: '2-digit',
@@ -190,13 +190,13 @@ export default function ApiHealthPage() {
         </div>
 
         {/* Incident Timeline */}
-        <div className="p-6 rounded-2xl bg-white border border-purple-100 shadow-xs">
+        <div className="p-6 rounded-2xl bg-white border border-slate-100 shadow-xs">
           <div className="flex items-center justify-between mb-4">
             <div>
-              <h2 className="text-base font-bold text-[#170526]">Incident History & Mitigations</h2>
-              <p className="text-xs text-[#806b8c]">Audited operational telemetry logs</p>
+              <h2 className="text-base font-bold text-[#0E36B4]">Incident History & Mitigations</h2>
+              <p className="text-xs text-[#64748B]">Audited operational telemetry logs</p>
             </div>
-            <span className="text-xs font-semibold px-2.5 py-1 rounded-lg bg-purple-50 text-purple-700">
+            <span className="text-xs font-semibold px-2.5 py-1 rounded-lg bg-slate-50 text-[#245BFF]">
               Audit Trail
             </span>
           </div>
@@ -205,7 +205,7 @@ export default function ApiHealthPage() {
             {incidents.map((inc) => (
               <div
                 key={inc.id}
-                className="p-4 rounded-xl border border-purple-100 bg-purple-50/20 flex flex-col md:flex-row md:items-center justify-between gap-4"
+                className="p-4 rounded-xl border border-slate-100 bg-slate-50/20 flex flex-col md:flex-row md:items-center justify-between gap-4"
               >
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
@@ -220,20 +220,20 @@ export default function ApiHealthPage() {
                     >
                       {inc.severity}
                     </span>
-                    <span className="font-bold text-sm text-[#170526]">{inc.title}</span>
+                    <span className="font-bold text-sm text-[#0E36B4]">{inc.title}</span>
                   </div>
-                  <p className="text-xs text-[#806b8c]">
-                    Service: <span className="font-semibold text-[#3b284c]">{inc.service_name}</span>
+                  <p className="text-xs text-[#64748B]">
+                    Service: <span className="font-semibold text-[#1E293B]">{inc.service_name}</span>
                   </p>
                   {inc.resolution_notes && (
-                    <p className="text-xs text-[#3b284c] bg-white/70 p-2 rounded-lg border border-purple-100/60 mt-1">
+                    <p className="text-xs text-[#1E293B] bg-white/70 p-2 rounded-lg border border-slate-100/60 mt-1">
                       {inc.resolution_notes}
                     </p>
                   )}
                 </div>
 
-                <div className="flex flex-col md:items-end text-xs font-mono text-[#806b8c]">
-                  <span className="font-semibold text-purple-900 capitalize">{inc.status}</span>
+                <div className="flex flex-col md:items-end text-xs font-mono text-[#64748B]">
+                  <span className="font-semibold text-[#0E36B4] capitalize">{inc.status}</span>
                   <span>Started: {new Date(inc.started_at).toLocaleString()}</span>
                   {inc.resolved_at && (
                     <span className="text-emerald-700 font-semibold">

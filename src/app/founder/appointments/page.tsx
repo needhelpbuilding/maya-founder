@@ -41,7 +41,7 @@ export default function FounderAppointmentsPage() {
         actionButton={
           <button
             onClick={() => alert('Exporting appointments register (CSV)...')}
-            className="px-4 py-2 rounded-xl bg-[#240b3b] hover:bg-[#170526] text-white text-xs font-semibold flex items-center gap-2 shadow-xs transition-colors cursor-pointer"
+            className="px-4 py-2 rounded-xl bg-[#245BFF] hover:bg-[#0E36B4] text-white text-xs font-semibold flex items-center gap-2 shadow-xs transition-colors cursor-pointer"
           >
             <FileSpreadsheet size={14} />
             Export Register CSV
@@ -51,15 +51,15 @@ export default function FounderAppointmentsPage() {
 
       <div className="px-8 py-6 space-y-6 max-w-[1600px] mx-auto">
         {/* Search & Filters */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-2xl bg-white border border-purple-100 shadow-xs">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-2xl bg-white border border-slate-100 shadow-xs">
           <div className="relative w-full sm:w-96">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#806b8c]" size={16} />
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#64748B]" size={16} />
             <input
               type="text"
               placeholder="Search by Booking Ref (e.g. APT-9482), Patient or Doctor..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 rounded-xl bg-purple-50/40 border border-purple-100 text-xs focus:outline-none focus:ring-2 focus:ring-purple-400"
+              className="w-full pl-10 pr-4 py-2 rounded-xl bg-slate-50/40 border border-slate-100 text-xs focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
           </div>
 
@@ -67,7 +67,7 @@ export default function FounderAppointmentsPage() {
             <select
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value)}
-              className="px-3 py-2 rounded-xl bg-purple-50/40 border border-purple-100 text-xs font-medium text-[#170526] focus:outline-none focus:ring-2 focus:ring-purple-400"
+              className="px-3 py-2 rounded-xl bg-slate-50/40 border border-slate-100 text-xs font-medium text-[#0E36B4] focus:outline-none focus:ring-2 focus:ring-blue-400"
             >
               <option value="all">All Appointment Statuses</option>
               <option value="Completed">Completed</option>
@@ -80,7 +80,7 @@ export default function FounderAppointmentsPage() {
             <select
               value={paymentFilter}
               onChange={(e) => setPaymentFilter(e.target.value)}
-              className="px-3 py-2 rounded-xl bg-purple-50/40 border border-purple-100 text-xs font-medium text-[#170526] focus:outline-none focus:ring-2 focus:ring-purple-400"
+              className="px-3 py-2 rounded-xl bg-slate-50/40 border border-slate-100 text-xs font-medium text-[#0E36B4] focus:outline-none focus:ring-2 focus:ring-blue-400"
             >
               <option value="all">All Payment Statuses</option>
               <option value="Paid">Paid</option>
@@ -90,11 +90,11 @@ export default function FounderAppointmentsPage() {
         </div>
 
         {/* Appointment Register Table */}
-        <div className="p-6 rounded-2xl bg-white border border-purple-100 shadow-xs">
+        <div className="p-6 rounded-2xl bg-white border border-slate-100 shadow-xs">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs">
               <thead>
-                <tr className="border-b border-purple-100 text-[#806b8c] uppercase tracking-wider">
+                <tr className="border-b border-slate-100 text-[#64748B] uppercase tracking-wider">
                   <th className="pb-3 font-semibold">Ref #</th>
                   <th className="pb-3 font-semibold">Patient</th>
                   <th className="pb-3 font-semibold">Attending Doctor</th>
@@ -104,26 +104,26 @@ export default function FounderAppointmentsPage() {
                   <th className="pb-3 font-semibold text-right">Booked At</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-purple-50">
+              <tbody className="divide-y divide-slate-100">
                 {filteredAppointments.map((a) => (
-                  <tr key={a.id} className="hover:bg-purple-50/20 transition-colors">
-                    <td className="py-3.5 font-mono font-bold text-purple-900">
+                  <tr key={a.id} className="hover:bg-slate-50/20 transition-colors">
+                    <td className="py-3.5 font-mono font-bold text-[#0E36B4]">
                       {a.booking_ref}
                     </td>
                     <td className="py-3.5">
-                      <p className="font-bold text-[#170526]">{a.patient_name}</p>
-                      <p className="text-[11px] text-[#806b8c] font-mono">{a.patient_phone}</p>
+                      <p className="font-bold text-[#0E36B4]">{a.patient_name}</p>
+                      <p className="text-[11px] text-[#64748B] font-mono">{a.patient_phone}</p>
                     </td>
                     <td className="py-3.5">
-                      <p className="font-semibold text-[#170526]">{a.doctor_name}</p>
-                      <p className="text-[11px] text-purple-700">{a.department_name}</p>
+                      <p className="font-semibold text-[#0E36B4]">{a.doctor_name}</p>
+                      <p className="text-[11px] text-[#245BFF]">{a.department_name}</p>
                     </td>
                     <td className="py-3.5">
-                      <p className="font-medium text-[#170526]">{a.appointment_date}</p>
-                      <p className="text-[11px] text-[#806b8c] font-mono">{a.time_slot}</p>
+                      <p className="font-medium text-[#0E36B4]">{a.appointment_date}</p>
+                      <p className="text-[11px] text-[#64748B] font-mono">{a.time_slot}</p>
                     </td>
                     <td className="py-3.5">
-                      <p className="font-bold text-[#170526]">₹{a.consultation_fee}</p>
+                      <p className="font-bold text-[#0E36B4]">₹{a.consultation_fee}</p>
                       <span
                         className={`inline-block px-1.5 py-0.2 rounded text-[10px] font-semibold ${
                           a.payment_status === 'Paid'
@@ -147,7 +147,7 @@ export default function FounderAppointmentsPage() {
                         {a.appointment_status}
                       </span>
                     </td>
-                    <td className="py-3.5 text-right text-[11px] text-[#806b8c] font-mono">
+                    <td className="py-3.5 text-right text-[11px] text-[#64748B] font-mono">
                       {new Date(a.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                     </td>
                   </tr>
