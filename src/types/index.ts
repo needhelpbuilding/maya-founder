@@ -1,4 +1,4 @@
-// Central Types for Maya Hospital Founder Control Centre
+// Central Types for Maya Hospital Founder Control Centre & Shared Operational Models
 
 export interface Doctor {
   id: string;
@@ -105,12 +105,47 @@ export interface PaymentRecord {
   receipt_number: string;
   appointment_id?: string;
   patient_name: string;
+  patient_phone?: string;
   amount: number;
   payment_method: 'Cash' | 'UPI' | 'Card' | 'Online - Razorpay';
   payment_status: 'Completed' | 'Pending' | 'Failed' | 'Refunded';
   transaction_ref?: string;
   collected_by: string;
   payment_date: string;
+}
+
+export interface Inquiry {
+  id: string;
+  sender_name: string;
+  sender_phone: string;
+  sender_email?: string;
+  category: string;
+  message: string;
+  status: 'New' | 'Open' | 'In Progress' | 'Resolved' | 'Closed';
+  assigned_to?: string;
+  created_at: string;
+}
+
+export interface SupportMessage {
+  id: string;
+  patient_name: string;
+  phone: string;
+  channel: string;
+  message: string;
+  is_incoming: boolean;
+  status: 'Open' | 'Replied' | 'Resolved';
+  created_at: string;
+}
+
+export interface NotificationRecord {
+  id: string;
+  recipient_name: string;
+  phone_number: string;
+  template_type: 'appointment_confirmation' | 'reminder' | 'doctor_reschedule' | 'general';
+  message_content: string;
+  delivery_status: 'Queued' | 'Sent' | 'Delivered' | 'Read' | 'Failed';
+  sent_at?: string;
+  created_at: string;
 }
 
 export interface ServiceHealth {

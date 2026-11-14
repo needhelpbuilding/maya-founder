@@ -1,44 +1,43 @@
 /* Maya Hospital Founder Control Centre Global Styling
    Inheriting the exact Imperial Royal Velvet Plum, Majestic Amethyst, and Lilac Cream
    Consistent with Lander and Reception dashboards */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
-@layer base {
-  :root {
-    --primary-color: #240b3b;       /* Deep Imperial Royal Velvet Plum */
-    --secondary-color: #7c3aed;     /* Majestic Imperial Purple Accent */
-    --accent-purple: #9333ea;
-    --accent-light: #c084fc;
-    --tertiary-color: #170526;      /* Darkest Amethyst / Midnight Plum */
-    --darkblue: #170526;
-    --black: #10031c;
-    --white: #ffffff;
-    --grey: #806b8c;
-    --fadeblue: #faf6fd;            /* Soft Lilac-Tinted Cream */
-    --red: #c94a29;                 /* Accent alert color */
-    --body-color: #3b284c;          /* Deep rich slate plum */
-    
-    --brand-font: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-    --heading-font: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-    --body-font: 'Inter', system-ui, -apple-system, sans-serif;
-  }
+:root {
+  --primary-color: #240b3b;       /* Deep Imperial Royal Velvet Plum */
+  --secondary-color: #7c3aed;     /* Majestic Imperial Purple Accent */
+  --accent-purple: #9333ea;
+  --accent-light: #c084fc;
+  --tertiary-color: #170526;      /* Darkest Amethyst / Midnight Plum */
+  --darkblue: #170526;
+  --black: #10031c;
+  --white: #ffffff;
+  --grey: #806b8c;
+  --fadeblue: #faf6fd;            /* Soft Lilac-Tinted Cream */
+  --red: #c94a29;                 /* Accent alert color */
+  --body-color: #3b284c;          /* Deep rich slate plum */
+  
+  --brand-font: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --heading-font: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --body-font: 'Inter', system-ui, -apple-system, sans-serif;
+}
 
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: var(--body-font);
-    font-size: 14.5px;
-    line-height: 1.55;
-    color: var(--body-color);
-    background-color: #fcfaff;
-    -webkit-font-smoothing: antialiased;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font);
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--body-color);
+  background-color: #fcfaff;
+  -webkit-font-smoothing: antialiased;
+}
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--heading-font);
-    letter-spacing: -0.02em;
-    color: #170526;
-  }
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  letter-spacing: -0.02em;
+  color: #170526;
 }
 
 /* Custom Founder Scrollbars */
