@@ -16,25 +16,25 @@ export default function TopNavbar({ title, subtitle, actionButton }: TopNavbarPr
   const degradedServices = services.filter(s => s.status === 'Degraded' || s.status === 'Down');
 
   return (
-    <header className="sticky top-0 z-30 flex items-center justify-between px-8 py-4 bg-white/80 backdrop-blur-md border-b border-purple-100 shadow-xs">
+    <header className="sticky top-0 z-30 flex items-center justify-between px-8 py-4 bg-white border-b border-orange-100 shadow-xs">
       {/* Title & Context */}
       <div>
-        <h1 className="text-xl font-bold text-[#170526] tracking-tight">{title}</h1>
+        <h1 className="text-xl font-bold text-[#245BFF] tracking-tight">{title}</h1>
         {subtitle && (
-          <p className="text-xs text-[#806b8c] font-medium mt-0.5">{subtitle}</p>
+          <p className="text-xs text-slate-500 font-medium mt-0.5">{subtitle}</p>
         )}
       </div>
 
       {/* Right Controls */}
       <div className="flex items-center gap-4">
         {/* Date Filter selector */}
-        <div className="flex items-center p-1 rounded-xl bg-purple-50/70 border border-purple-100/80 text-xs font-semibold text-[#3b284c]">
+        <div className="flex items-center p-1 rounded-xl bg-orange-50/70 border border-orange-200/80 text-xs font-semibold text-slate-800">
           <button
             onClick={() => setDateRange('today')}
             className={`px-3 py-1 rounded-lg transition-all ${
               dateRange === 'today'
-                ? 'bg-white text-[#240b3b] shadow-xs font-bold'
-                : 'text-[#806b8c] hover:text-[#240b3b]'
+                ? 'bg-white text-[#245BFF] shadow-xs font-bold'
+                : 'text-slate-600 hover:text-[#245BFF]'
             }`}
           >
             Today
@@ -43,8 +43,8 @@ export default function TopNavbar({ title, subtitle, actionButton }: TopNavbarPr
             onClick={() => setDateRange('7d')}
             className={`px-3 py-1 rounded-lg transition-all ${
               dateRange === '7d'
-                ? 'bg-white text-[#240b3b] shadow-xs font-bold'
-                : 'text-[#806b8c] hover:text-[#240b3b]'
+                ? 'bg-white text-[#245BFF] shadow-xs font-bold'
+                : 'text-slate-600 hover:text-[#245BFF]'
             }`}
           >
             7D
@@ -53,8 +53,8 @@ export default function TopNavbar({ title, subtitle, actionButton }: TopNavbarPr
             onClick={() => setDateRange('30d')}
             className={`px-3 py-1 rounded-lg transition-all ${
               dateRange === '30d'
-                ? 'bg-white text-[#240b3b] shadow-xs font-bold'
-                : 'text-[#806b8c] hover:text-[#240b3b]'
+                ? 'bg-white text-[#245BFF] shadow-xs font-bold'
+                : 'text-slate-600 hover:text-[#245BFF]'
             }`}
           >
             30D
@@ -63,8 +63,8 @@ export default function TopNavbar({ title, subtitle, actionButton }: TopNavbarPr
             onClick={() => setDateRange('90d')}
             className={`px-3 py-1 rounded-lg transition-all ${
               dateRange === '90d'
-                ? 'bg-white text-[#240b3b] shadow-xs font-bold'
-                : 'text-[#806b8c] hover:text-[#240b3b]'
+                ? 'bg-white text-[#245BFF] shadow-xs font-bold'
+                : 'text-slate-600 hover:text-[#245BFF]'
             }`}
           >
             90D
